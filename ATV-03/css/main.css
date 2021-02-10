@@ -1,0 +1,370 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #222222;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 60%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.menu-container {
+  background: #e0e8e9;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.menu-container .menu {
+  color: #212121;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-container .menu .logo {
+  margin: 20px 10px;
+  margin-left: -180px;
+}
+
+.menu-container .menu .logo a {
+  color: #ecf0f1;
+  font-size: 20pt;
+}
+
+.menu-container .menu .logo img {
+  width: 500px;
+}
+
+.menu-container .menu .menu-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu-container .menu .menu-nav .categoriaMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-container .menu .menu-nav .categoriaMenu .ativo {
+  background-color: #212121;
+  color: #ecf0f1;
+}
+
+.menu-container .menu .menu-nav a {
+  color: #212121;
+  font-size: 1.25em;
+  display: block;
+  padding: 10px;
+  -webkit-transition-delay: size 0.2s;
+          transition-delay: size 0.2s;
+}
+
+.menu-container .menu .menu-nav a:hover {
+  color: #3b3b3b;
+  font-size: 1.21em;
+}
+
+.menu-container .menu .menu-nav .login {
+  border: 1px solid #212121;
+  border-radius: 5px;
+  background: white;
+  padding: 10px 25px;
+}
+
+.menu-container .menu .menu-nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-container .menu .menu-nav .dropdown-container {
+  display: none;
+  position: absolute;
+  background-color: #e0e8e9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.menu-container .menu .menu-nav .dropdown-container a,
+.menu-container .menu .menu-nav .dropdown-container input {
+  padding: 12px 16px;
+  display: block;
+}
+
+.menu-container .menu .menu-nav .dropdown-container a:hover {
+  background-color: #3b3b3b;
+  color: #e0e8e9;
+}
+
+.menu-container .menu .menu-nav .dropdown-container input:focus {
+  background-color: #3b3b3b;
+  color: #e0e8e9;
+}
+
+.menu-container .menu .menu-nav .dropdown-container input:focus::-webkit-input-placeholder {
+  color: #e0e8e9;
+}
+
+.menu-container .menu .menu-nav .dropdown-container input:focus:-ms-input-placeholder {
+  color: #e0e8e9;
+}
+
+.menu-container .menu .menu-nav .dropdown-container input:focus::-ms-input-placeholder {
+  color: #e0e8e9;
+}
+
+.menu-container .menu .menu-nav .dropdown-container input:focus::placeholder {
+  color: #e0e8e9;
+}
+
+.menu-container .menu .menu-nav .dropdown:hover .dropdown-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu-container .menu .menu-nav .dropdown:hover > a {
+  color: #3b3b3b;
+  font-size: 1.21em;
+}
+
+.relogios {
+  max-width: 1300px;
+  margin: 80px auto;
+}
+
+.relogios h1 {
+  font-size: 30pt;
+  margin: 0 10px 60px 10px;
+  margin-left: 30px;
+}
+
+.relogios h3 {
+  font-size: 2em;
+  margin: 0 10px 60px 10px;
+  color: #a1a1a1;
+}
+
+.relogios .relogios-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.relogios .relogios-container .relogios-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 175px;
+          flex: 1 1 175px;
+  margin: 30px;
+  max-height: 600px;
+  -webkit-transition: height 2s;
+  transition: height 2s;
+  border: 1px solid #e0e8e9;
+  border-radius: 5px;
+}
+
+.relogios .relogios-container .relogios-item .ocultar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.relogios .relogios-container .relogios-item .ocultar img:hover {
+  opacity: 80%;
+}
+
+.relogios .relogios-container .relogios-item h2 {
+  font-size: 12pt;
+  padding: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.relogios .relogios-container .relogios-item .relogios-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.relogios .relogios-container .relogios-item span {
+  color: #212121;
+  max-width: 300px;
+  margin: 2px auto;
+  display: inline;
+  font-size: 20pt;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0 5px 0;
+}
+
+.relogios .relogios-container .relogios-item .relogios-botao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px;
+}
+
+.relogios .relogios-container .relogios-item .relogios-botao a {
+  display: none;
+  left: -40px;
+  max-width: 400px;
+  margin: 10px auto;
+  font-size: 15pt;
+  font-weight: bold;
+  padding: 10px 0 5px 0;
+  border-top: 40px solid #e0e8e9;
+  border-bottom: 4px solid #e0e8e9;
+  border-width: 0px;
+  color: #212121;
+  -webkit-transition: border-bottom 3s;
+  transition: border-bottom 3s;
+}
+
+.relogios .relogios-container .relogios-item .relogios-botao a:hover {
+  color: #878787;
+  border-top: 4px;
+}
+
+.relogios .relogios-container .clicado .relogios-botao a {
+  display: inline;
+  left: auto;
+}
+
+.relogios .relogios-container .clicado span {
+  font-size: 1.5em;
+}
+
+.relogios section {
+  display: none;
+}
+
+.relogios .ativo {
+  display: block !important;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #e0e8e9;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  font-size: 12pt;
+  color: #212121;
+}
+
+@media (max-width: 700px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .menu-container {
+    background: #e0e8e9;
+    height: 100v;
+  }
+  .menu-container .menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  .menu-container .menu .logo {
+    margin: 0px;
+    text-align: center;
+  }
+  .menu-container .menu .menu-nav .dropdown-container {
+    min-width: 100%;
+  }
+  .menu-container .menu .menu-nav .dropdown-container a::before {
+    content: "↳";
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+    color: #212121;
+  }
+}
+/*# sourceMappingURL=main.css.map */

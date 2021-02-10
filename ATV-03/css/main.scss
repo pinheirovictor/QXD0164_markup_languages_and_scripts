@@ -1,0 +1,290 @@
+$cor1: #212121;
+$cor2:rgb(224, 232, 233);
+$cor3: #ecf0f1;
+$apple: white;
+$breakpoints: ( "small": ( min-width: 767px, ), "medium": ( min-width: 992px, ), "large": ( min-width: 1200px, ), ) !default;
+@mixin margin-padding-0 {
+    margin: 0px;
+    padding: 0px;
+}
+
+@mixin max-width-padrao {
+    max-width: 960px;
+}
+
+@mixin bar-before($h) {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: $h;
+    margin-right: 10px;
+    background: $cor1;
+}
+
+// Reset
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+    @include margin-padding-0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #222222;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 60%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.menu-container {
+    background: $cor2;
+    position: sticky;
+    top: 0;
+    .menu {
+        color: $cor1;
+        @include max-width-padrao;
+        margin: 0 auto;
+        padding: 15px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            margin: 20px 10px;
+            margin-left: -180px;
+            a {
+                color: $cor3;
+                font-size: 20pt;
+            }
+            img {
+                width: 500px;
+            }
+        }
+        .menu-nav {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .categoriaMenu {
+                display: flex;
+                justify-content: space-between;
+            }
+            .categoriaMenu .ativo {
+                background-color: $cor1;
+                color: $cor3;
+            }
+            a {
+                color: $cor1;
+                font-size: 1.25em;
+                display: block;
+                padding: 10px;
+                transition-delay: size 0.2s;
+                &:hover {
+                    color: lighten($cor1, 10%);
+                    font-size: 1.21em;
+                }
+            }
+            .login {
+                border: 1px solid $cor1;
+                border-radius: 5px;
+                background: $apple;
+                padding: 10px 25px;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-container {
+                display: none;
+                position: absolute;
+                background-color: $cor2;
+                min-width: 160px;
+                z-index: 1;
+            }
+            .dropdown-container a,
+            .dropdown-container input {
+                padding: 12px 16px;
+                display: block;
+            }
+            .dropdown-container a:hover {
+                background-color: lighten($cor1, 10%);
+                color: $cor2;
+            }
+            .dropdown-container input:focus {
+                background-color: lighten($cor1, 10%);
+                color: $cor2;
+                &::placeholder {
+                    color: $cor2;
+                }
+            }
+            .dropdown:hover .dropdown-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .dropdown:hover>a {
+                color: lighten($cor1, 10%);
+                font-size: 1.21em;
+            }
+        }
+    }
+}
+
+.relogios {
+    max-width: 1300px;
+    margin: 80px auto;
+    h1 {
+        font-size: 30pt;
+        margin: 0 10px 60px 10px;
+        margin-left: 30px;
+    }
+    h3 {
+        font-size: 2em;
+        margin: 0 10px 60px 10px;
+        color: lighten($cor1, 50%);
+    }
+    @media (min-width: 700px) {}
+    .relogios-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        .relogios-item {
+            flex: 1 1 175px;
+            margin: 30px;
+            max-height: 600px;
+            transition: height 2s;
+            border: 1px solid $cor2;
+            border-radius: 5px;
+            .olho-ocultar {
+                display: flex;
+                padding: 2px;
+                justify-content: flex-end;
+                img:hover {
+                    opacity: 80%;
+                }
+            }
+            h2 {
+                font-size: 12pt;
+                padding: 8px;
+                justify-content: center;
+            }
+            .relogios-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            span {
+                color: $cor1;
+                max-width: 300px;
+                margin: 2px auto;
+                display: inline;
+                font-size: 20pt;
+                text-align: center;
+                font-weight: bold;
+                padding: 10px 0 5px 0;
+            }
+            .relogios-botao {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 30px;
+                a {
+                    display: none;
+                    left: -40px;
+                    max-width: 400px;
+                    margin: 10px auto;
+                    font-size: 15pt;
+                    font-weight: bold;
+                    padding: 10px 0 5px 0;
+                    border-top: 40px solid $cor2;
+                    border-bottom: 4px solid $cor2;
+                    border-width: 0px;
+                    color: $cor1;
+                    transition: border-bottom 3s;
+                    &:hover {
+                        color: lighten($cor1, 40%);
+                        border-top: 4px;
+                    }
+                }
+            }
+        }
+        .clicado .relogios-botao a {
+            display: inline;
+            left: auto;
+        }
+        .clicado span {
+            font-size: 1.5em;
+        }
+    }
+}
+
+.relogios section {
+    display: none;
+}
+
+.relogios .ativo {
+    display: block !important;
+}
+
+.footer {
+    display: flex;
+    background: $cor2;
+    height: 80px;
+    align-items: center;
+}
+
+.footer p {
+    flex: 1;
+    text-align: center;
+    font-size: 12pt;
+    color: $cor1;
+}
+
+@media (max-width: 700px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+    .menu-container {
+        background: $cor2;
+        height: 100v;
+        .menu {
+            position: sticky;
+            top: 0;
+            .logo {
+                margin: 0px;
+                text-align: center;
+            }
+            .menu-nav {
+                .dropdown-container {
+                    min-width: 100%;
+                    a::before {
+                        content: "↳";
+                        display: inline-block;
+                        width: auto;
+                        margin-right: 10px;
+                        color: $cor1;
+                    }
+                }
+            }
+        }
+    }
+}
